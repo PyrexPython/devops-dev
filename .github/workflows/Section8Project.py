@@ -8,7 +8,10 @@ app = Flask(__name__)
 class HomeFinder:
     def __init__(self):
         self.government_url = "https://www.hud.gov/program_offices/public_indian_housing/pha/contacts"  # Public source
-        self.listing_source = "https://publichousing.example.com"  # Example source, replace with your own or public API
+        self.listing_source = "https://api.census.gov/data/2019/acs/acs5"  # U.S. Census Bureau Housing Data
+        self.listing_source = "https://www.openstreetmap.org" # For displaying properties on a map or integrating geographic data
+        self.listing_source =  "https://www.census.gov/data/developers/data-sets.html" # The U.S. Census provides housing data, including housing affordability, ownership, and rental data by region
+
 
     def get_housing_commissions(self, state):
         """Fetches public housing commissions from a government source."""
